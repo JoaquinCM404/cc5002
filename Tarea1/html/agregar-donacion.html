@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Donación</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand">Dona tus dispositivos</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Inicio</a></li>
+          </ul>
+        </div>
+    </nav>
+    
+    <div class="main-container">
+        <div id="val-box" hidden>
+            <h2 id="val-msg"></h2>
+            <ul id="val-list"></ul>
+        </div>
+        <form name="donation" method="post" enctype="multipart/form-data">
+            <h3> Información de Contacto</h3>
+
+            <label for="nombre">Nombre donante:</label><br>
+            <input type="text" id="nombre" name="nombre" size="80" minlength="3" maxlength="80" required><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" size="30" maxlength="30" required><br>
+
+            <label for="celular">Número celular:</label><br>
+            <input type="text" id="celular" name="celular" size="15" minlength="8" maxlength="15" ><br>
+
+            <label for="select-region">Región:</label><br>
+            <select name="select-region" id="select-region" required>
+                <option value="">Seleccione una región</option>
+            </select><br>
+
+            <label for="select-comuna">Comuna:</label><br>
+            <select name="select-comuna" id="select-comuna" required>
+                <option value="">Seleccione una comuna</option>
+            </select><br>    
+            <br>
+        
+            <div id="device-container">
+              <h3> Información de Dispositivo</h3>
+              <div class="device-block">
+
+                <label for="name">Nombre dispositivo:</label><br>
+                <input type="text" id="name" name="name" size="80" minlength="3" maxlength="80" required><br>
+                
+                <label for="desc">Descripción:</label><br>
+                <textarea cols="50" rows="4" id="desc" name="desc" required></textarea><br>
+
+                <label for="select-device">Tipo:</label><br>
+                <select name="select-device" id="select-device" required>
+                    <option value="">Seleccione dispositivo</option>
+                </select><br>
+
+                <label for="uso">Años de uso:</label><br>
+                <input type="number" id="uso" name="uso" min= 1 max=99 required><br>
+
+                <label for="select-state">Estado funcionamiento:</label><br>
+                <select name="select-state" id="select-state" required>
+                    <option value="">Seleccione una opción</option>
+                </select><br>    
+                
+                <label for="files">Fotos</label>
+                <input type="file" name="files" id="files" multiple accept="image/*,.pdf" required><br>
+              </div>  
+            </div>
+            <button type="button" id="add-device-btn">Agregar otro dispositivo</button><hr> 
+            <button id="submit-btn" type="button">Publicar esta donación</button>
+        </form>
+    </div>
+    <script src="../js/select.js"></script>
+    <script src="../js/validation.js"></script>
+    <script src="../js/add_device.js"></script>
+
+</body>
+</html>
