@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donación de Dispositivos</title>
+    <title>{% block title %}{% endblock %}</title>
+    {% block css %}{% endblock %}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
             <a class="navbar-brand">Dona tus dispositivos</a>
           </div>
           <ul class="nav navbar-nav">
-            <li class="active"><a href="agregar-donacion.html">Agregar Donación</a></li>
-          </ul>
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="ver-dispositivos.html">Ver Dispositivos</a></li>
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            <li><a href="{{ url_for('agregar_donacion') }}">Agregar Donación</a></li>
+            <li><a href="{{ url_for('ver_dispositivos') }}">Ver Dispositivos</a></li>
           </ul>
         </div>
     </nav>
-   
-</body>
+
+    <section class="main-container">
+      {% block content %}{% endblock %}
+    </section>
+
+    {% block javascript %}{% endblock %}
+  </body>
 </html>
+
