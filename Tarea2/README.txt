@@ -1,5 +1,6 @@
-Basado en gran parte en los Auxiliares 2 y 3. 
-Se utilizó el css visto en el auxiliar 3 con pequeñas modificaciones. Para la barra de navegación
-(para volver a inicio) se utilizó un estilo distinto. No se alcanzaron a implementar los html de 
-informacion-dispositivo ni ver-dispositivos, excepto la opción de volver a index.html.
-El html de agregar-donacion funciona correctamente en google chrome.
+Aún no se implementan las validaciones ni la conexión con la base de datos. 
+Solo se hizo correr la aplicación con flask y se implementó jinja.
+Después de descargar los archivos e instalar los requirements (en ambiente virtual), 
+correr aplicación en la terminal con el comando:
+> flask run
+
